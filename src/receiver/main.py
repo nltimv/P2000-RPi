@@ -25,49 +25,47 @@ try:
     while True:
         line = multimon_ng.stdout.readline()
         multimon_ng.poll()
-        if line.__contains__("ALN"):
+        if b'ALN' in line and line.startswith('FLEX'):
 
-            if line.startswith('FLEX'):
+            flex = line[0:5]
+            timestamp = line[6:25]
+            melding = line[58:]
+            groupid = line[35:41]
+            capcode = line[43:52]
 
-                flex = line[0:5]
-                timestamp = line[6:25]
-                melding = line[58:]
-                groupid = line[35:41]
-                capcode = line[43:52]
+            regex_prio1 = "^A\s?1|\s?A\s?1|PRIO\s?1|^P\s?1"
+            regex_prio2 = "^A\s?2|\s?A\s?2|PRIO\s?2|^P\s?2"
+            regex_prio3 = "^B\s?1|^B\s?2|^B\s?3|PRIO\s?3|^P\s?3|PRIO\s?4|^P\s?4"
 
-                regex_prio1 = "^A\s?1|\s?A\s?1|PRIO\s?1|^P\s?1"
-                regex_prio2 = "^A\s?2|\s?A\s?2|PRIO\s?2|^P\s?2"
-                regex_prio3 = "^B\s?1|^B\s?2|^B\s?3|PRIO\s?3|^P\s?3|PRIO\s?4|^P\s?4"
+            if re.search(regex_prio1, melding, re.IGNORECASE):
+                priokleur = 'red'
 
-                if re.search(regex_prio1, melding, re.IGNORECASE):
-                    priokleur = 'red'
+            elif re.search(regex_prio2, melding, re.IGNORECASE):
+                priokleur = 'yellow'
 
-                elif re.search(regex_prio2, melding, re.IGNORECASE):
-                    priokleur = 'yellow'
+            elif re.search(regex_prio3, melding, re.IGNORECASE):
+                priokleur = 'green'
 
-                elif re.search(regex_prio3, melding, re.IGNORECASE):
-                    priokleur = 'green'
+            else:
+                priokleur = 'magenta'
 
-                else:
-                    priokleur = 'magenta'
+            if groupid == groupidold:
 
-                if groupid == groupidold:
+                print(colored(capcode, 'white')),
 
-                    print colored(capcode, 'white'),
+            else:
 
-                else:
+                utc = datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S')
+                utc = utc.replace(tzinfo=tz.tzutc())
+                local = utc.astimezone(tz.tzlocal())
+                local = local.strftime("%d-%m-%Y %H:%M:%S")
 
-                    utc = datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S')
-                    utc = utc.replace(tzinfo=tz.tzutc())
-                    local = utc.astimezone(tz.tzlocal())
-                    local = local.strftime("%d-%m-%Y %H:%M:%S")
+                print(' ')
+                print(colored(local, 'blue', attrs=['bold']), colored(melding, priokleur, attrs=['bold'])),
+                print('                  '),
+                print(colored(capcode, 'white')),
 
-                    print ' '
-                    print colored(local, 'blue', attrs=['bold']), colored(melding, priokleur, attrs=['bold']),
-                    print '                  ',
-                    print colored(capcode, 'white'),
-
-                    groupidold = groupid
+                groupidold = groupid
 
 
 except KeyboardInterrupt:
