@@ -1,0 +1,23 @@
+version: 3
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    volumes:
+      - rabbitmqdata:/var/lib/rabbitmq
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=rabbitmquser
+      - RABBITMQ_DEFAULT_PASS=i2jv9W22N8zly4YM
+  receiver:
+    image: p2000-rpi/receiver:latest
+    build: src/receiver
+    privileged: true
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+    depends_on:
+      - rabbitmq
+volumes:
+  rabbitmqdata:
+  mysqldata:
