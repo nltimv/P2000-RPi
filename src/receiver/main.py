@@ -6,6 +6,8 @@ from datetime import datetime
 from dateutil import tz
 from termcolor import colored
 
+print(colored("P2000 Message Receiver", 'yellow') + " - " + colored("(c) nltimv 2019", 'blue', attrs=['bold']))
+
 groupidold = ""
 
 
@@ -21,17 +23,20 @@ multimon_ng = subprocess.Popen("rtl_fm -f 169.65M -M fm -s 22050 -p 43 -g 30 | m
                                stderr=open('error.txt', 'a'),
                                shell=True)
 
+print(colored("Ready to receive P2000 messages", 'green'))
+
 try:
     while True:
         line = multimon_ng.stdout.readline()
+        output = line.decode("utf-8")
         multimon_ng.poll()
-        if b'ALN' in line and line.startswith('FLEX'):
+        if "ALN" in output and output.startswith("FLEX"):
 
-            flex = line[0:5]
-            timestamp = line[6:25]
-            melding = line[58:]
-            groupid = line[35:41]
-            capcode = line[43:52]
+            flex = output[0:5]
+            timestamp = output[6:25]
+            melding = output[60:]
+            groupid = output[37:43]
+            capcode = output[45:54]
 
             regex_prio1 = "^A\s?1|\s?A\s?1|PRIO\s?1|^P\s?1"
             regex_prio2 = "^A\s?2|\s?A\s?2|PRIO\s?2|^P\s?2"
