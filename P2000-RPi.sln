@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pi2000.Receiver.Business", "src\Pi2000.Receiver.Business\Pi2000.Receiver.Business.csproj", "{F1861E05-4374-463C-B9C3-4DC01101B50D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pi2000.Receiver.Business", "src\Pi2000.Receiver.Business\Pi2000.Receiver.Business.csproj", "{F1861E05-4374-463C-B9C3-4DC01101B50D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pi2000.Receiver.Mock", "src\Pi2000.Receiver.Mock\Pi2000.Receiver.Mock.csproj", "{590FF81B-EB53-4B47-B2ED-83CD1BF54A35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pi2000.Receiver.Mock", "src\Pi2000.Receiver.Mock\Pi2000.Receiver.Mock.csproj", "{590FF81B-EB53-4B47-B2ED-83CD1BF54A35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pi2000.Receiver.Service", "src\Pi2000.Receiver.Service\Pi2000.Receiver.Service.csproj", "{EAE7B168-BC48-4184-8EDE-957FBEF74938}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pi2000.Receiver.Service", "src\Pi2000.Receiver.Service\Pi2000.Receiver.Service.csproj", "{EAE7B168-BC48-4184-8EDE-957FBEF74938}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pi2000.Interpreter", "src\Pi2000.Interpreter\Pi2000.Interpreter.csproj", "{BCA40E16-9D58-40F0-9EE4-547A5F5B7D8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{EAE7B168-BC48-4184-8EDE-957FBEF74938}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAE7B168-BC48-4184-8EDE-957FBEF74938}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAE7B168-BC48-4184-8EDE-957FBEF74938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCA40E16-9D58-40F0-9EE4-547A5F5B7D8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCA40E16-9D58-40F0-9EE4-547A5F5B7D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCA40E16-9D58-40F0-9EE4-547A5F5B7D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCA40E16-9D58-40F0-9EE4-547A5F5B7D8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
