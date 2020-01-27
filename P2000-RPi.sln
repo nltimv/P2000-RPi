@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pi2000.Receiver.Business", "src\Pi2000.Receiver.Business\Pi2000.Receiver.Business.csproj", "{F1861E05-4374-463C-B9C3-4DC01101B50D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pi2000.Receiver.Mock", "src\Pi2000.Receiver.Mock\Pi2000.Receiver.Mock.csproj", "{590FF81B-EB53-4B47-B2ED-83CD1BF54A35}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pi2000.Receiver.Service", "src\Pi2000.Receiver.Service\Pi2000.Receiver.Service.csproj", "{EAE7B168-BC48-4184-8EDE-957FBEF74938}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pi2000.Interpreter", "src\Pi2000.Interpreter\Pi2000.Interpreter.csproj", "{BCA40E16-9D58-40F0-9EE4-547A5F5B7D8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pi2000.Interpreter", "src\Pi2000.Interpreter\Pi2000.Interpreter.csproj", "{BCA40E16-9D58-40F0-9EE4-547A5F5B7D8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pi2000.Receiver.Mock", "src\Pi2000.Receiver.Mock\Pi2000.Receiver.Mock.csproj", "{27D38049-5995-4BBC-99CE-076D8264CE5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{F1861E05-4374-463C-B9C3-4DC01101B50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1861E05-4374-463C-B9C3-4DC01101B50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1861E05-4374-463C-B9C3-4DC01101B50D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{590FF81B-EB53-4B47-B2ED-83CD1BF54A35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{590FF81B-EB53-4B47-B2ED-83CD1BF54A35}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{590FF81B-EB53-4B47-B2ED-83CD1BF54A35}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{590FF81B-EB53-4B47-B2ED-83CD1BF54A35}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EAE7B168-BC48-4184-8EDE-957FBEF74938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EAE7B168-BC48-4184-8EDE-957FBEF74938}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAE7B168-BC48-4184-8EDE-957FBEF74938}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{BCA40E16-9D58-40F0-9EE4-547A5F5B7D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCA40E16-9D58-40F0-9EE4-547A5F5B7D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCA40E16-9D58-40F0-9EE4-547A5F5B7D8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27D38049-5995-4BBC-99CE-076D8264CE5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27D38049-5995-4BBC-99CE-076D8264CE5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27D38049-5995-4BBC-99CE-076D8264CE5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27D38049-5995-4BBC-99CE-076D8264CE5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
