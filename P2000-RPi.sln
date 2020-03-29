@@ -11,6 +11,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pi2000.Interpreter", "src\P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pi2000.Receiver.Mock", "src\Pi2000.Receiver.Mock\Pi2000.Receiver.Mock.csproj", "{27D38049-5995-4BBC-99CE-076D8264CE5B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Receiver", "1. Receiver", "{631D8208-1968-4882-83A2-198F6CE7A095}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Interpreter", "2. Interpreter", "{7CF47FF8-3013-4A4A-B211-75EB7AF3F13F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "9. Messaging", "9. Messaging", "{B313E1C0-6B54-4F65-9E7F-669913B89C47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pi2000.Messaging.Core", "src\Pi2000.Messaging.Core\Pi2000.Messaging.Core.csproj", "{89C467F2-7EDA-408D-89E2-0CD0F513671E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +41,20 @@ Global
 		{27D38049-5995-4BBC-99CE-076D8264CE5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27D38049-5995-4BBC-99CE-076D8264CE5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27D38049-5995-4BBC-99CE-076D8264CE5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89C467F2-7EDA-408D-89E2-0CD0F513671E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89C467F2-7EDA-408D-89E2-0CD0F513671E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89C467F2-7EDA-408D-89E2-0CD0F513671E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89C467F2-7EDA-408D-89E2-0CD0F513671E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F1861E05-4374-463C-B9C3-4DC01101B50D} = {631D8208-1968-4882-83A2-198F6CE7A095}
+		{EAE7B168-BC48-4184-8EDE-957FBEF74938} = {631D8208-1968-4882-83A2-198F6CE7A095}
+		{BCA40E16-9D58-40F0-9EE4-547A5F5B7D8C} = {7CF47FF8-3013-4A4A-B211-75EB7AF3F13F}
+		{27D38049-5995-4BBC-99CE-076D8264CE5B} = {631D8208-1968-4882-83A2-198F6CE7A095}
+		{89C467F2-7EDA-408D-89E2-0CD0F513671E} = {B313E1C0-6B54-4F65-9E7F-669913B89C47}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {34ED73E9-BA70-4FA8-A074-9AD7EECD9062}

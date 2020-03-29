@@ -17,7 +17,7 @@ namespace Pi2000.Interpreter
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHangfire(x => x.UseSqlServerStorage("Data Source=localhost;Initial Catalog=hangfire-test;Integrated Security=False;User ID=user-hangfire;Password=23wesdXC"));
+            services.AddHangfire(x => x.UseSqlServerStorage("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=hangfire-test;Integrated Security=False;User ID=pi2000;Password=pi2000"));
             services.AddHangfireServer();
         }
 

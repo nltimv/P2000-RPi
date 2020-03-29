@@ -7,6 +7,7 @@ namespace Pi2000.Receiver.Service
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            
         }
     }
 }
